@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+
+            main {
+                flex: 1;
+            }
+
+            footer {
+                background: #333;
+                color: white;
+                padding: 20px;
+                text-align: center;
+            }
+        </style>
+        <title>
+            Helpdesk
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
+
+        
+    </head>
+
+    <body>
+        <header>
+            <div class="main-box" style="background-color: #000000cc; padding: 15px; border-radius: 8px; text-align: center;">
+                <h1>
+                    Dashboard
+                </h1>
+            </div>
+        </header>
+        
+        <main>
+            <br>
+            <div class="container">
+                <h1>Technician Dashboard</h1>
+
+                <!--Filters-->
+                <div class="filters">
+                    <label style="color: rgb(255, 255, 255);"><strong>User Name:</strong> 
+                        <input type="text" id="techName" placeholder="Enter your name" style="margin-left: 5px;">
+                    </label>
+                    <label style="margin-left: 20px; color: rgb(255, 255, 255);"><strong>Status Filter:</strong> 
+                        <select id="statusFilter" style="margin-left: 5px;">
+                            <option value="">All Tickets</option>
+                            <option value="Open">Open</option>
+                            <option value="InProgress">In Progress</option>
+                            <option value="Resolved">Resolved</option>
+                            <option value="Closed">Closed</option>
+                        </select>
+                    </label>
+                    <button onclick="loadTickets()" style="margin-left: 20px; color: rgb(0, 0, 0);">Load All Tickets</button>
+                    <button onclick="loadMyTickets()">My Assigned Tickets</button>
+                </div>
+
+                <!--Tickets List-->
+                <div id="ticketsContainer"></div>
+            </div>
+            <br>
+            <!--Reply-->
+            <div id="replyModal" class="modal">
+                <div class="modal-content">
+                    <h3>Reply to Ticket</h3>
+                    <textarea id="replyMessage" rows="6" placeholder="Enter your reply message here..."></textarea>
+                    <div class="modal-buttons">
+                        <button onclick="submitReply()" style="background: #007bff; color: white;">Submit Reply</button>
+                        <button onclick="closeModal()" style="background: #6c757d; color: white;">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <span class="wave">>:3</span>
+            </div>
+
+            <script src="dashboard.js"></script>
+        </main>
+
+        <footer style="background-color: rgba(9, 73, 33, 0.651);">
+            <hr>
+            <h3>This ain't a footy</h3>
+            author: Me <br>
+            <small><a href="mailTo:mail@fakemail.com">mail@fakemail.com</a></small>  
+            <nav>
+                <div class="link-box" style="background-color: #000000cc; padding: 15px; border-radius: 8px; text-align: center;">
+                    <h2>
+                        <a href="/index.html">Back to homepage</a> 
+                    </h2>
+                </div>
+            </nav>
+        </footer>
+    </body>
+
+</html>

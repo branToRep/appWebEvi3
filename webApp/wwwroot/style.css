@@ -1,0 +1,184 @@
+@font-face{ /* Add to include locally downloaded fonts*/
+    src: url(fonts/Asimovian-Regular.ttf);
+    font-family: Asimovian; /*Name it however you want*/
+}
+
+body{
+    background-color: black;
+    margin: 15px; /*Margin is the space between browser border and webpage elements*/
+    /*display: flow-root; /*This will make anything that's floating stick to the inside of borders*/
+    background-image: url(pics/1680979677146246.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+h1{
+    color: white;
+    font-family: sans-serif, arial; /*Second font is for fall back in case first isn't supported in device*/
+    border-style: groove;
+    border-width: 2px; /*border settings*/
+    border-color: aqua;
+    border-radius: 5px;
+    text-shadow: 3px 3px 3px red; /*first is horizontal, second vertical offset and third is blur. You can add multiple shadows separated by comma*/
+}
+h2{
+    color: white;
+    font-family: "comic sans", Arial;
+    border: 2px solid rgb(0, 253, 232); /*border settings in single line*/
+}
+h3{
+    color: white;
+    font-family: "comic sans", Arial;
+    border: 2px solid rgb(0, 253, 232); /*border settings in single line*/
+}
+p{
+    color: white;
+}
+p2{
+    color: rgb(0, 0, 0);
+    font-family: sans-serif, arial;
+}
+footer {
+    margin-top: auto !important;
+    background-color: rgba(9, 73, 33, 0.651) !important;
+}
+
+@keyframes ani1 {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+div1 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: rgba(255, 0, 0, 0.685);
+  animation-name: ani1;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+divBG {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: rgba(255, 0, 0, 0.692);
+}
+
+.replies-section {
+    margin-top: 15px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.replies-header {
+    margin-bottom: 10px;
+}
+
+.toggle-btn {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.toggle-btn:hover {
+    background: #5a6268;
+}
+
+.replies-container {
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.reply {
+    background: #000000;
+    opacity: .7;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 3px solid #007bff;
+}
+
+.reply strong {
+    color: #ffffff;
+}
+
+.reply p {
+    margin: 5px 0;
+    color: #ffffff;
+}
+
+.reply small {
+    color: #6c757d;
+}
+
+.container{
+    background: #f00000b4;
+    opacity: .8;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.modal{
+    background: #f00000a4;
+    opacity: .8;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+@keyframes ani2 {
+    0% { 
+        transform: translateY(0);
+        color: #ff0000;
+    }
+    25% { 
+        transform: translateY(-10px);
+        color: #00ff00;
+    }
+    50% { 
+        transform: translateY(0);
+        color: #0000ff;
+    }
+    75% { 
+        transform: translateY(10px);
+        color: #ff00ff;
+    }
+    100% { 
+        transform: translateY(0);
+        color: #ff0000;
+    }
+}
+
+.wave {
+    display: inline-block;
+    animation: ani2 2s infinite linear;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+@keyframes ani3 {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(60px, -60px); }
+    50% { transform: translate(0, 0); }
+    75% { transform: translate(-40px, -40px); }
+    100% { transform: translate(0, 0); }
+}
+
+.eight {
+    display: inline-block;
+    animation: ani3 4s infinite ease-in-out;
+    font-size: 3em;
+    color: #ffffff;
+}

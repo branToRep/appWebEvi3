@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+
+            main {
+                flex: 1;
+            }
+
+            footer {
+                background: #333;
+                color: white;
+                padding: 20px;
+                text-align: center;
+            }
+        </style>
+        <title>
+            Ticket Submission
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <div class="main-box" style="background-color: #000000cc; padding: 15px; border-radius: 8px; text-align: center;">
+                <h1>
+                    Submit your problem
+                </h1>
+            </div>
+        </header>
+
+        <main>
+            <br>
+            <div class="container">
+                <!--Ticket Submission-->
+                <div class="section">
+                    <h2>Submit New Ticket</h2>
+                    <form id="ticketForm">
+                        <input type="text" id="userEmail" placeholder="Your email" required><br>
+                        <input type="text" id="ticketTitle" placeholder="Issue title" required><br>
+                        <textarea id="ticketDescription" placeholder="Describe your issue..." rows="4" required></textarea><br>
+                        <select id="ticketPriority"><br>
+                            <option value="Low">Low</option>
+                            <option value="Medium" selected>Medium</option>
+                            <option value="High">High</option>
+                            <option value="Critical">Critical</option>
+                        </select>
+                        <button type="submit">Submit Ticket</button><br>
+                    </form>
+                </div>
+
+                <!--User's Tickets-->
+                <div class="section">
+                    <h2>My Tickets</h2>
+                    <button onclick="loadMyTickets()">Refresh My Tickets</button>
+                    <div id="myTicketsContainer"></div>
+                </div>
+            </div>
+
+            <div>
+                <span class="eight">>:3</span>
+            </div>
+            <script src="ticket.js"></script>                
+        </main>
+
+        <footer style="background-color: rgba(9, 73, 33, 0.651);">
+            <hr>
+                <h3>This ain't a footy</h3>
+                author: Me <br>
+                <small><a href="mailTo:mail@fakemail.com">mail@fakemail.com</a></small>
+                <nav>
+                    <div class="link-box" style="background-color: #000000cc; padding: 15px; border-radius: 8px; text-align: center;">
+                        <h2>
+                            <a href="/index.html">Back to homepage</a> 
+                        </h2>
+                    </div>
+                </nav>
+                <br><br><br><br>
+        </footer>
+    </body>
+
+</html>
